@@ -1,0 +1,177 @@
+body {
+  background-color: #fff;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1; /* IE6-7 触发 hasLayout */
+}
+
+
+
+.color-orange {
+  color: #ff6600;
+}
+
+.header-bd,
+.nav-bd,
+.footer-bd {
+  width: 1000px;
+  margin: 0 auto;
+}
+.header {
+  background-color: #fff;
+  height: 110px;
+  padding: 0 30px;
+}
+.header .logo {
+  float: left;
+  margin: 20px 0 0 0px;
+}
+.header .logo img {
+  height: 40px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.header .logo .text {
+  font-size: 32px;
+  font-weight: bold;
+  color: #000;
+  vertical-align: middle;
+}
+
+.nav {
+  float: right;
+  margin-top: 40px;
+}
+.nav li {
+  float: left;
+}
+.nav a {
+  float: left;
+  width: 150px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+.nav a:hover {
+  color: #009241;
+}
+.nav .active a {
+  color: #009241;
+}
+
+
+.main {
+  width: 1200px;
+  margin: 20px auto 50px;
+}
+
+.unslider {
+  position: relative;
+}
+.slider {
+  height: 496px;
+}
+.slider .unslider-wrap {
+  position: relative;
+}
+.slider .unslider-wrap li {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+}
+.unslider-nav {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  text-align: center;
+}
+.unslider-nav ol li {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 4px;
+  background: 0 0;
+  background: #f2f2f2\9;
+  border-radius: 5px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.unslider-nav .unslider-active {
+  background-color: #f50;
+  cursor: default;
+}
+
+
+.product {
+  padding: 20px 0 0;
+}
+.product h3 {
+  font-size: 18px;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.product .list ul {
+  margin: 0 -10px;
+}
+.product .list .item {
+  float: left;
+  margin: 0 10px 20px 10px;
+  position: relative;
+}
+.product .list .item:hover {
+  outline: 2px solid #009241;
+}
+.product .list .item img {
+  width: 285px;
+}
+.product .list .item .title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.product .detail {
+  text-align: center;
+}
+.product .detail img {
+  width: 400px;
+}
+
+.footer {
+  background-color: #222;
+  height: 100px;
+  padding-top: 50px;
+}
+.footer ul {
+  width: 344px;
+  margin: 0 auto;
+}
+.footer li {
+  float: left;
+  margin: 0 15px;
+}
+.footer a {
+  color: #fff;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <title>德清益顺竹木</title>
+    <link rel="stylesheet" href="http://g.tbcdn.cn/thx/cube/1.2.1/cube-min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/script/jquery.js"></script>
+    <script src="assets/script/mustache.js"></script>
+    <script src="assets/script/unslider.js"></script>
+    <script src="assets/script/product.js"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="logo">
+        <span><img src="assets/img/logo.png" /></span>
+        <span class="text">德清益顺竹木</span>
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>|</li>
+          <li class="active">
+            <a href="/product.html">产品展示</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="/contact.html">联系方式</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="subbanner">
+      <img src="assets/img/subbanner.jpg">
+    </div>
+    <div class="main">
+      <div class="product">
+        <h3>产品展示</h3>
+        <div class="detail" id="J_product_detail"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer-bd">
+        <ul class="clearfix">
+          <li>
+            <a href="/">首页</a>
+          </li>
+          <li>
+            <a href="/product.html">产品展示</a>
+          </li>
+          <li>
+            <a href="/contcat.html">联系方式</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <script type="template" id="template_01">
+      <div class="img">
+        <img src="assets/img/product/{{timestamp}}.png" />
+      </div>
+    </script>
+    <script>
+      $(function(){
+        function getUrlParam(name) {
+          var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)") //构造一个含有目标参数的正则表达式对象
+          var r = window.location.search.substr(1).match(reg)  //匹配目标参数
+          if (r != null) return unescape(r[2])
+          return null //返回参数值
+        }
+
+        // product
+        var template = $('#template_01').html()
+        var container = $('#J_product_detail')
+        var id = getUrlParam('id')
+
+        var data = $.map(PRODUCT, function(v) {
+          if (v.timestamp == id) {
+            return v
+          } else {
+            return null
+          }
+        })
+
+        container.html(Mustache.render(template, data[0]))
+      })
+    </script>
+  </body>
+</html>
