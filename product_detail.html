@@ -68,7 +68,7 @@
 
     <script type="template" id="template_01">
       <div class="img">
-        <img src="assets/img/product/{{timestamp}}_big.jpg" />
+        <img src="http://kiwipics.b0.upaiyun.com/c/{{id}}.jpg" />
       </div>
     </script>
     <script>
@@ -86,7 +86,7 @@
         var id = getUrlParam('id')
 
         var data = $.map(PRODUCT, function(v) {
-          if (v.timestamp == id) {
+          if (v.id == id) {
             return v
           } else {
             return null
