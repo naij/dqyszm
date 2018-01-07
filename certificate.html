@@ -7,9 +7,7 @@
     <link rel="stylesheet" href="http://g.tbcdn.cn/thx/cube/1.2.1/cube-min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/script/jquery.js"></script>
-    <script src="assets/script/mustache.js"></script>
     <script src="assets/script/unslider.js"></script>
-    <script src="assets/script/product.js"></script>
   </head>
   <body>
     <div class="header">
@@ -23,11 +21,11 @@
             <a href="/">首页</a>
           </li>
           <li>|</li>
-          <li class="active">
+          <li>
             <a href="/product.html">产品展示</a>
           </li>
           <li>|</li>
-          <li>
+          <li class="active">
             <a href="/certificate.html">资质证书</a>
           </li>
           <li>|</li>
@@ -41,11 +39,13 @@
     <div class="subbanner">
       <img src="assets/img/subbanner.jpg">
     </div>
+
     <div class="main">
-      <div class="product">
-        <h3>产品展示</h3>
-        <div class="list">
-          <ul class="clearfix" id="J_product_container"></ul>
+      <div class="certificate">
+        <h3>资质证书</h3>
+
+        <div class="container">
+          <img src="assets/img/certificate.jpg">
         </div>
       </div>
     </div>
@@ -67,25 +67,5 @@
         </ul>
       </div>
     </div>
-
-    <script type="template" id="template_01">
-      {{#list}}
-      <li class="item">
-        <a href="/product_detail.html?id={{timestamp}}">
-          <img src="assets/img/product/{{timestamp}}.jpg">
-        </a>
-        <h4 class="title">{{title}}</h4>
-      </li>
-      {{/list}}
-    </script>
-    <script>
-      $(function(){
-        // product
-        var template = $('#template_01').html()
-        var container = $('#J_product_container')
-        var data = {list: window.PRODUCT}
-        container.html(Mustache.render(template, data))
-      })
-    </script>
   </body>
 </html>

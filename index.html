@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
     <title>德清益顺竹木</title>
-    <link rel="stylesheet" href="http://g.tbcdn.cn/thx/cube/1.2.1/cube-min.css">
+    <link rel="stylesheet" href="//g.tbcdn.cn/thx/cube/1.2.1/cube-min.css">
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/script/jquery.js"></script>
     <script src="assets/script/mustache.js"></script>
@@ -25,6 +25,10 @@
           <li>|</li>
           <li>
             <a href="/product.html">产品展示</a>
+          </li>
+          <li>|</li>
+          <li>
+            <a href="/certificate.html">资质证书</a>
           </li>
           <li>|</li>
           <li>
@@ -50,9 +54,18 @@
     </div>
     <div class="main">
       <div class="product">
-        <h3>产品展示</h3>
+        <h3><a href="/product.html" class="more">查看更多</a>产品展示</h3>
         <div class="list">
           <ul class="clearfix" id="J_product_container"></ul>
+        </div>
+      </div>
+
+      <div class="about">
+        <h3>关于我们</h3>
+        <div class="description">
+          <p>德清县浙北毛竹市场（前身是成立于80年代的武康浙北毛竹市场）是新组建的一家股份制有限责任公司。成立于2001年5月，公司注册资金1100万元，固定资产2060万元，占地面积450亩，河岸线440米，总建筑面积10580平方米，是华东地区唯一的一家依托县内产业集竹类批发、加工的大型市场。公司以“公司＋农户＋经营户”的模式，实行市场规范管理和动作，不仅为本县2.8万余户竹农广开销售渠道，还吸引了周边省、市（县）的竹类大量涌入。按目前初步统计，年销售毛竹2500万枝（含脚手片1200万张），杂竹15万吨，成交金额3.5亿元。</p>
+          <p>自2001年10月份营业到现今，已有442户经营户进场交易，（其中毛竹经营户151户，小竹经营户109户，竹类加工户182户）各种竹类（毛竹、小竹、杂竹等）、竹制品（脚手片、跳板、竹梯、竹床、凉席、竹椅等），品种繁多，规格齐全。</p>
+          <p>德清县浙北毛竹市场位于浙江省德清县武康镇（县府所在地）三桥铁公水码头，南临09省道，西靠104国道，宣杭铁路，东面是京杭大运河，地理位置得天独厚，水陆交通十分便利，享有充分的运输优势，是广大客户理想的采集地。</p>
         </div>
       </div>
     </div>
@@ -66,7 +79,10 @@
             <a href="/product.html">产品展示</a>
           </li>
           <li>
-            <a href="/contcat.html">联系方式</a>
+            <a href="/certificate.html">资质证书</a>
+          </li>
+          <li>
+            <a href="/contact.html">联系方式</a>
           </li>
         </ul>
       </div>
@@ -75,7 +91,7 @@
       {{#list}}
       <li class="item">
         <a href="/product_detail.html?id={{timestamp}}">
-          <img src="assets/img/product/{{timestamp}}.png">
+          <img src="assets/img/product/{{timestamp}}.jpg">
         </a>
         <h4 class="title">{{title}}</h4>
       </li>
@@ -94,7 +110,7 @@
         // product
         var template = $('#template_01').html()
         var container = $('#J_product_container')
-        var data = {list: PRODUCT}
+        var data = {list: window.PRODUCT.splice(0, 4)}
         container.html(Mustache.render(template, data))
       })
     </script>

@@ -16,10 +16,11 @@ body {
   *zoom: 1; /* IE6-7 触发 hasLayout */
 }
 
-
-
-.color-orange {
-  color: #ff6600;
+a {
+  color: #333;
+}
+a:hover {
+  color: #009241;
 }
 
 .header-bd,
@@ -122,9 +123,16 @@ body {
 }
 .product h3 {
   font-size: 18px;
+  font-weight: bold;
   padding-bottom: 5px;
   margin-bottom: 15px;
   border-bottom: 1px solid #ddd;
+}
+.product .more {
+  float: right;
+  font-size: 12px;
+  font-weight: normal;
+  margin-top: 7px;
 }
 .product .list ul {
   margin: 0 -10px;
@@ -156,7 +164,62 @@ body {
   text-align: center;
 }
 .product .detail img {
-  width: 400px;
+  // width: 400px;
+}
+
+.about {
+  padding: 20px 0 0;
+}
+.about h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.about .description p {
+  margin: 10px 0;
+  font-size: 16px;
+}
+
+
+.certificate {
+  padding: 20px 0 0;
+}
+.certificate h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.certificate .container {
+  text-align: center;
+}
+.certificate .container img {
+  width: 500px;
+}
+
+.contact {
+  padding: 20px 0 0;
+}
+.contact h3 {
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ddd;
+}
+.contact .map {
+  float: left;
+  width: 600px;
+  margin-right: 20px;
+}
+.contact .list {
+  font-size: 16px;
+}
+.contact .list li {
+  margin: 10px 0;
 }
 
 .footer {
